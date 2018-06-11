@@ -88,6 +88,7 @@
 + (void)Fetch_UPLOADData:(PTFetchModel *)fetchModel
 {
     NSAssert(fetchModel.uploadDatas, @"uploadData can not be nil");
+    
     [[self sharedPTFetchManager].sessionManager.requestSerializer setValue:@"no-cache" forHTTPHeaderField:@"Cache-Control"];
     
     [[self sharedPTFetchManager].sessionManager POST:fetchModel.urlString parameters:fetchModel.parametDict constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {

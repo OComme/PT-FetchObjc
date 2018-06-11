@@ -8,21 +8,29 @@
 
 #import "PTFetchModel.h"
 
-@implementation PTFetchModel
-/// 数据处理对象
-static id<PTFetchProtocol> PTFetchModelDelegate;
-
-+ (void)SetFetchModelDelegate:(id<PTFetchProtocol>)delegate
+@interface PTFetchModel ()
 {
-    PTFetchModelDelegate = delegate;
+    NSString *_urlString;
+    NSDictionary *_parametDict;
 }
+
+/**
+ 当前类的子类
+ */
+@property (nullable,nonatomic,weak) id<PTFetchProtocol> delegate;
+
+@end
+
+@implementation PTFetchModel
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
         _shouldAppend = YES;
-        NSAssert(PTFetchModelDelegate != nil, @"PTFetchModel 必须设置 代理对象");
+        
+        NSAssert([self conformsToProtocol:@protocol(PTFetchProtocol)], @"PTFetchModel的子类必须遵循 PTFetchProtocol 代理方法");
+        self.delegate = (id)self;
     }
     return self;
 }
@@ -30,7 +38,7 @@ static id<PTFetchProtocol> PTFetchModelDelegate;
 - (NSString *)urlString
 {
     if (self.shouldAppend) {
-        return [PTFetchModelDelegate appentUrlWithShortUrl:_urlString];
+        return [self.delegate urlByAppendingUrl:_urlString];
     }
     return _urlString;
 }
@@ -38,19 +46,19 @@ static id<PTFetchProtocol> PTFetchModelDelegate;
 - (NSDictionary *)parametDict
 {
     if (self.shouldAppend) {
-        return [PTFetchModelDelegate appentParamentsWithShortParament:_parametDict];
+        return [self.delegate paramentByAppendingParament:_parametDict];
     }
     return _parametDict;
 }
 
 - (void)setResponseObject:(id)responseObject
 {
-    [PTFetchModelDelegate dealRulesWithData:responseObject :self.succeed :self.failed];
+    [self.delegate filteredResponseData:responseObject withSucceed:self.succeed Failed:self.failed];
 }
 
 - (void)setError:(id)error
 {
-    [PTFetchModelDelegate dealErrorData:error :self.failed];
+    self.failed([self.delegate mapErrorData:error]);
 }
 
 @end

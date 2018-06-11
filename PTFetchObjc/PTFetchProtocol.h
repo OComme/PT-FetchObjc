@@ -23,22 +23,21 @@ typedef void(^PTFetchBlock)(id);
 /**
  拼接字符串
  */
-- (NSString *)appentUrlWithShortUrl:(NSString *)url;
+- (NSString *)urlByAppendingUrl:(NSString *)url;
 
 /**
  拼接参数
  */
-- (NSDictionary *)appentParamentsWithShortParament:(NSDictionary *)parament;
+- (NSDictionary *)paramentByAppendingParament:(NSDictionary *)parament;
 
 /**
- 处理返回数据
+ 筛选返回数据
  */
-- (void)dealRulesWithData:(NSData*)Data :(PTFetchBlock)succeed :(PTFetchBlock)failed;
+- (void)filteredResponseData:(NSData *)Data withSucceed:(PTFetchBlock)succeed Failed:(PTFetchBlock)failed;
 
 /**
  处理错误信息
-
  */
-- (void)dealErrorData:(id)error :(PTFetchBlock)failed;
+- (id)mapErrorData:(id)error;
 
 @end

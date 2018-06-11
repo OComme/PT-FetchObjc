@@ -16,6 +16,7 @@
 		011FDF5B20C544F400DCB2BF /* PTFetchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 011FDF5520C544F400DCB2BF /* PTFetchModel.m */; };
 		011FDF5C20C544F400DCB2BF /* PTFetchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 011FDF5820C544F400DCB2BF /* PTFetchManager.m */; };
 		011FDF5D20C544F400DCB2BF /* PTFetchUploadData.m in Sources */ = {isa = PBXBuildFile; fileRef = 011FDF5A20C544F400DCB2BF /* PTFetchUploadData.m */; };
+		01C265D520CE13F9005CDA3C /* PublicFetchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C265D420CE13F9005CDA3C /* PublicFetchModel.m */; };
 		6980D18380108EC8CC74A209 /* libPods-PT-FetchObjcDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C5B65CE7EF31DD48D00FAA /* libPods-PT-FetchObjcDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,8 @@
 		011FDF5820C544F400DCB2BF /* PTFetchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTFetchManager.m; sourceTree = "<group>"; };
 		011FDF5920C544F400DCB2BF /* PTFetchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTFetchModel.h; sourceTree = "<group>"; };
 		011FDF5A20C544F400DCB2BF /* PTFetchUploadData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTFetchUploadData.m; sourceTree = "<group>"; };
+		01C265D320CE13F9005CDA3C /* PublicFetchModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicFetchModel.h; sourceTree = "<group>"; };
+		01C265D420CE13F9005CDA3C /* PublicFetchModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublicFetchModel.m; sourceTree = "<group>"; };
 		49C5B65CE7EF31DD48D00FAA /* libPods-PT-FetchObjcDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PT-FetchObjcDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D6113E3CF5391994063EEB /* Pods-PT-FetchObjcDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PT-FetchObjcDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PT-FetchObjcDemo/Pods-PT-FetchObjcDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		AF2C7287E4DC2C4D96B4A351 /* Pods-PT-FetchObjcDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PT-FetchObjcDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-PT-FetchObjcDemo/Pods-PT-FetchObjcDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -75,6 +78,7 @@
 		011FDF2420C52A6500DCB2BF /* PT-FetchObjcDemo */ = {
 			isa = PBXGroup;
 			children = (
+				01C265D220CE13D6005CDA3C /* FetchModel */,
 				011FDF5320C544F400DCB2BF /* PTFetchObjc */,
 				011FDF2520C52A6500DCB2BF /* AppDelegate.h */,
 				011FDF2620C52A6500DCB2BF /* AppDelegate.m */,
@@ -102,6 +106,15 @@
 			);
 			name = PTFetchObjc;
 			path = ../../PTFetchObjc;
+			sourceTree = "<group>";
+		};
+		01C265D220CE13D6005CDA3C /* FetchModel */ = {
+			isa = PBXGroup;
+			children = (
+				01C265D320CE13F9005CDA3C /* PublicFetchModel.h */,
+				01C265D420CE13F9005CDA3C /* PublicFetchModel.m */,
+			);
+			path = FetchModel;
 			sourceTree = "<group>";
 		};
 		31359623B26DD6371E0F312E /* Pods */ = {
@@ -214,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				011FDF5B20C544F400DCB2BF /* PTFetchModel.m in Sources */,
+				01C265D520CE13F9005CDA3C /* PublicFetchModel.m in Sources */,
 				011FDF2A20C52A6500DCB2BF /* ViewController.m in Sources */,
 				011FDF3520C52A6800DCB2BF /* main.m in Sources */,
 				011FDF5D20C544F400DCB2BF /* PTFetchUploadData.m in Sources */,

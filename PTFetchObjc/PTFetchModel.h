@@ -19,28 +19,18 @@
 #import "PTFetchUploadData.h"
 #import "PTFetchProtocol.h"
 
-
 @interface PTFetchModel : NSObject
-{
-    @protected NSString *_urlString;
-    @protected NSDictionary *_parametDict;
-}
-
-/**
- 设置数据处理对象
- */
-+ (void)SetFetchModelDelegate:(id <PTFetchProtocol>)delegate;
 
 //=============================dataDeal======================================
 /**
  待处理请求的结果数据
  */
-@property (nullable,nonatomic,strong) id responseObject;
+- (void)setResponseObject:(id _Nonnull)responseObject;
 
 /**
  待处理的错误信息
  */
-@property (nullable,nonatomic,strong) id error;
+- (void)setError:(id _Nonnull)error;
 
 //=============================paramet======================================
 /**
@@ -80,4 +70,5 @@
  请求进度
  */
 @property (nonatomic,copy) PTFetchBlock progressing;
+
 @end
