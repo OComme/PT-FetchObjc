@@ -26,18 +26,17 @@
 - (instancetype)init
 {
     self = [super init];
-    if (self) {
-        _shouldAppend = YES;
-        
-        NSAssert([self conformsToProtocol:@protocol(PTFetchProtocol)], @"PTFetchModel的子类必须遵循 PTFetchProtocol 代理方法");
-        self.delegate = (id)self;
+    if (self) {        
+        if ([self conformsToProtocol:@protocol(PTFetchProtocol)]) {
+            self.delegate = (id)self;
+        }
     }
     return self;
 }
 
 - (NSString *)urlString
 {
-    if (self.shouldAppend) {
+    if (self.delegate) {
         return [self.delegate urlByAppendingUrl:_urlString];
     }
     return _urlString;
@@ -45,7 +44,7 @@
 
 - (NSDictionary *)parametDict
 {
-    if (self.shouldAppend) {
+    if (self.delegate) {
         return [self.delegate paramentByAppendingParament:_parametDict];
     }
     return _parametDict;
@@ -53,12 +52,20 @@
 
 - (void)setResponseObject:(id)responseObject
 {
-    [self.delegate filteredResponseData:responseObject withSucceed:self.succeed Failed:self.failed];
+    if (self.delegate) {
+        [self.delegate filteredResponseData:responseObject withSucceed:self.succeed Failed:self.failed];
+    }else{
+        self.succeed(responseObject);
+    }
 }
 
 - (void)setError:(id)error
 {
-    self.failed([self.delegate mapErrorData:error]);
+    if (self.delegate) {
+        self.failed([self.delegate mapErrorData:error]);
+    }else{
+        self.failed(error);
+    }
 }
 
 @end

@@ -43,11 +43,6 @@
  */
 @property (nonnull,nonatomic,strong) NSDictionary *parametDict;
 
-/**
- 是否需要拼接参数
- */
-@property (nonatomic,assign) BOOL shouldAppend;
-
 //=============================dataUpload===================================
 /**
  上传数据 {uploadName:uploadData}
