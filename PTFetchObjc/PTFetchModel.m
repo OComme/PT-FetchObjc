@@ -9,10 +9,6 @@
 #import "PTFetchModel.h"
 
 @interface PTFetchModel ()
-{
-    NSString *_urlString;
-    NSDictionary *_parametDict;
-}
 
 /**
  当前类的子类
@@ -39,6 +35,7 @@
     if (self.delegate) {
         return [self.delegate urlByAppendingUrl:_urlString];
     }
+    NSAssert(_urlString, @"urlStrin can not be nil");
     return _urlString;
 }
 
