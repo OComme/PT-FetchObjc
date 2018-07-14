@@ -13,9 +13,6 @@
 		011FDF2F20C52A6800DCB2BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 011FDF2E20C52A6800DCB2BF /* Assets.xcassets */; };
 		011FDF3220C52A6800DCB2BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 011FDF3020C52A6800DCB2BF /* LaunchScreen.storyboard */; };
 		011FDF3520C52A6800DCB2BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 011FDF3420C52A6800DCB2BF /* main.m */; };
-		011FDF5B20C544F400DCB2BF /* PTFetchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 011FDF5520C544F400DCB2BF /* PTFetchModel.m */; };
-		011FDF5C20C544F400DCB2BF /* PTFetchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 011FDF5820C544F400DCB2BF /* PTFetchManager.m */; };
-		011FDF5D20C544F400DCB2BF /* PTFetchUploadData.m in Sources */ = {isa = PBXBuildFile; fileRef = 011FDF5A20C544F400DCB2BF /* PTFetchUploadData.m */; };
 		01C265D520CE13F9005CDA3C /* PublicFetchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C265D420CE13F9005CDA3C /* PublicFetchModel.m */; };
 		6980D18380108EC8CC74A209 /* libPods-PT-FetchObjcDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C5B65CE7EF31DD48D00FAA /* libPods-PT-FetchObjcDemo.a */; };
 /* End PBXBuildFile section */
@@ -31,13 +28,6 @@
 		011FDF3120C52A6800DCB2BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		011FDF3320C52A6800DCB2BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		011FDF3420C52A6800DCB2BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		011FDF5420C544F400DCB2BF /* PTFetchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTFetchManager.h; sourceTree = "<group>"; };
-		011FDF5520C544F400DCB2BF /* PTFetchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTFetchModel.m; sourceTree = "<group>"; };
-		011FDF5620C544F400DCB2BF /* PTFetchProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTFetchProtocol.h; sourceTree = "<group>"; };
-		011FDF5720C544F400DCB2BF /* PTFetchUploadData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTFetchUploadData.h; sourceTree = "<group>"; };
-		011FDF5820C544F400DCB2BF /* PTFetchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTFetchManager.m; sourceTree = "<group>"; };
-		011FDF5920C544F400DCB2BF /* PTFetchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTFetchModel.h; sourceTree = "<group>"; };
-		011FDF5A20C544F400DCB2BF /* PTFetchUploadData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTFetchUploadData.m; sourceTree = "<group>"; };
 		01C265D320CE13F9005CDA3C /* PublicFetchModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicFetchModel.h; sourceTree = "<group>"; };
 		01C265D420CE13F9005CDA3C /* PublicFetchModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublicFetchModel.m; sourceTree = "<group>"; };
 		49C5B65CE7EF31DD48D00FAA /* libPods-PT-FetchObjcDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PT-FetchObjcDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,7 +69,6 @@
 			isa = PBXGroup;
 			children = (
 				01C265D220CE13D6005CDA3C /* FetchModel */,
-				011FDF5320C544F400DCB2BF /* PTFetchObjc */,
 				011FDF2520C52A6500DCB2BF /* AppDelegate.h */,
 				011FDF2620C52A6500DCB2BF /* AppDelegate.m */,
 				011FDF2820C52A6500DCB2BF /* ViewController.h */,
@@ -91,21 +80,6 @@
 				011FDF3420C52A6800DCB2BF /* main.m */,
 			);
 			path = "PT-FetchObjcDemo";
-			sourceTree = "<group>";
-		};
-		011FDF5320C544F400DCB2BF /* PTFetchObjc */ = {
-			isa = PBXGroup;
-			children = (
-				011FDF5620C544F400DCB2BF /* PTFetchProtocol.h */,
-				011FDF5920C544F400DCB2BF /* PTFetchModel.h */,
-				011FDF5520C544F400DCB2BF /* PTFetchModel.m */,
-				011FDF5420C544F400DCB2BF /* PTFetchManager.h */,
-				011FDF5820C544F400DCB2BF /* PTFetchManager.m */,
-				011FDF5720C544F400DCB2BF /* PTFetchUploadData.h */,
-				011FDF5A20C544F400DCB2BF /* PTFetchUploadData.m */,
-			);
-			name = PTFetchObjc;
-			path = ../../PTFetchObjc;
 			sourceTree = "<group>";
 		};
 		01C265D220CE13D6005CDA3C /* FetchModel */ = {
@@ -258,13 +232,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				011FDF5B20C544F400DCB2BF /* PTFetchModel.m in Sources */,
 				01C265D520CE13F9005CDA3C /* PublicFetchModel.m in Sources */,
 				011FDF2A20C52A6500DCB2BF /* ViewController.m in Sources */,
 				011FDF3520C52A6800DCB2BF /* main.m in Sources */,
-				011FDF5D20C544F400DCB2BF /* PTFetchUploadData.m in Sources */,
 				011FDF2720C52A6500DCB2BF /* AppDelegate.m in Sources */,
-				011FDF5C20C544F400DCB2BF /* PTFetchManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,7 +379,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FFC452564N;
 				INFOPLIST_FILE = "PT-FetchObjcDemo/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ocomme.PT-FetchObjcDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -423,7 +397,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FFC452564N;
 				INFOPLIST_FILE = "PT-FetchObjcDemo/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ocomme.PT-FetchObjcDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

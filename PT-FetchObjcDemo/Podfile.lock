@@ -14,13 +14,26 @@ PODS:
   - AFNetworking/Serialization (3.2.0)
   - AFNetworking/UIKit (3.2.0):
     - AFNetworking/NSURLSession
+  - PTFetchObjc (0.0.1):
+    - AFNetworking
 
 DEPENDENCIES:
   - AFNetworking
+  - PTFetchObjc (from `../`)
+
+EXTERNAL SOURCES:
+  PTFetchObjc:
+    :git: ../
+
+CHECKOUT OPTIONS:
+  PTFetchObjc:
+    :commit: b42f05207caf21b8f54ae94852c7c283183e13f8
+    :git: ../
 
 SPEC CHECKSUMS:
   AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
+  PTFetchObjc: da2f21546e45b6151f1a34572df496afa2c53a4c
 
-PODFILE CHECKSUM: bc9c2a76001f5fa2e5faec1ba866af1307311467
+PODFILE CHECKSUM: 86e70543cb029ec5b41255bd6364d2310229d768
 
 COCOAPODS: 1.4.0
