@@ -1,39 +1,42 @@
 PODS:
-  - AFNetworking (3.2.0):
-    - AFNetworking/NSURLSession (= 3.2.0)
-    - AFNetworking/Reachability (= 3.2.0)
-    - AFNetworking/Security (= 3.2.0)
-    - AFNetworking/Serialization (= 3.2.0)
-    - AFNetworking/UIKit (= 3.2.0)
-  - AFNetworking/NSURLSession (3.2.0):
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.2.0)
-  - AFNetworking/Security (3.2.0)
-  - AFNetworking/Serialization (3.2.0)
-  - AFNetworking/UIKit (3.2.0):
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - PTFetchObjc (0.0.1):
     - AFNetworking
 
 DEPENDENCIES:
-  - AFNetworking
   - PTFetchObjc (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
 
 EXTERNAL SOURCES:
   PTFetchObjc:
-    :git: ../
+    :git: "../"
 
 CHECKOUT OPTIONS:
   PTFetchObjc:
-    :commit: b42f05207caf21b8f54ae94852c7c283183e13f8
-    :git: ../
+    :commit: 907f4173e5054a44b9ac0f02703d3c9430e70e2a
+    :git: "../"
 
 SPEC CHECKSUMS:
-  AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   PTFetchObjc: da2f21546e45b6151f1a34572df496afa2c53a4c
 
-PODFILE CHECKSUM: 86e70543cb029ec5b41255bd6364d2310229d768
+PODFILE CHECKSUM: 89246f0b18b9dee8f7a4996efa59da97c1e54737
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3
