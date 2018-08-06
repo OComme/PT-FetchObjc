@@ -51,13 +51,16 @@
 {
     if (self.delegate) {
         [self.delegate filteredResponseData:responseObject withSucceed:self.succeed Failed:self.failed];
-    }else{
+    }else if(self.succeed){
         self.succeed(responseObject);
     }
 }
 
 - (void)setError:(id)error
 {
+     if (self.failed == nil) {
+        return;
+    }
     if (self.delegate) {
         self.failed([self.delegate mapErrorData:error]);
     }else{
